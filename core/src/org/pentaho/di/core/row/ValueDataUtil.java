@@ -990,7 +990,8 @@ public class ValueDataUtil {
         return new Double( Const.round( metaA.getNumber( dataA ).doubleValue(), metaB.getInteger( dataB ).intValue(),
             roundingMode ) );
       case ValueMetaInterface.TYPE_INTEGER:
-        return metaA.getInteger( dataA );
+        return new Long( Const.round( metaA.getInteger( dataA ).longValue(), metaB.getInteger( dataB ).intValue(),
+            roundingMode ) );
       case ValueMetaInterface.TYPE_BIGNUMBER:
         return Const.round( metaA.getBigNumber( dataA ), metaB.getInteger( dataB ).intValue(), roundingMode );
       default:

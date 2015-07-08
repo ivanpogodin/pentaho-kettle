@@ -539,17 +539,17 @@ public class ValueDataUtilTest extends TestCase {
     assertEquals( Long.valueOf( "12" ), calculate( "12", "4", ValueMetaInterface.TYPE_INTEGER,
         CalculatorMetaFunction.CALC_ROUND_2 ) );
     // scale < 0
-    //assertEquals( Long.valueOf( "100" ), calculate( "120", "-2", ValueMetaInterface.TYPE_INTEGER,
-    //    CalculatorMetaFunction.CALC_ROUND_2 ) );
+    assertEquals( Long.valueOf( "100" ), calculate( "120", "-2", ValueMetaInterface.TYPE_INTEGER,
+        CalculatorMetaFunction.CALC_ROUND_2 ) );
     // half
-    //assertEquals( Long.valueOf( "12350" ), calculate( "12345", "-1", ValueMetaInterface.TYPE_INTEGER,
-    //    CalculatorMetaFunction.CALC_ROUND_2 ) );
-    //assertEquals( Long.valueOf( "12360" ), calculate( "12355", "-1", ValueMetaInterface.TYPE_INTEGER,
-    //    CalculatorMetaFunction.CALC_ROUND_2 ) );
-    //assertEquals( Long.valueOf( "-12340" ), calculate( "-12345", "-1", ValueMetaInterface.TYPE_INTEGER,
-    //    CalculatorMetaFunction.CALC_ROUND_2 ) );
-    //assertEquals( Long.valueOf( "-12350" ), calculate( "-12355", "-1", ValueMetaInterface.TYPE_INTEGER,
-    //    CalculatorMetaFunction.CALC_ROUND_2 ) );
+    assertEquals( Long.valueOf( "12350" ), calculate( "12345", "-1", ValueMetaInterface.TYPE_INTEGER,
+        CalculatorMetaFunction.CALC_ROUND_2 ) );
+    assertEquals( Long.valueOf( "12360" ), calculate( "12355", "-1", ValueMetaInterface.TYPE_INTEGER,
+        CalculatorMetaFunction.CALC_ROUND_2 ) );
+    assertEquals( Long.valueOf( "-12340" ), calculate( "-12345", "-1", ValueMetaInterface.TYPE_INTEGER,
+        CalculatorMetaFunction.CALC_ROUND_2 ) );
+    assertEquals( Long.valueOf( "-12350" ), calculate( "-12355", "-1", ValueMetaInterface.TYPE_INTEGER,
+        CalculatorMetaFunction.CALC_ROUND_2 ) );
 
     // Test Kettle big Number types
     assertEquals( BigDecimal.valueOf( Double.valueOf( "1.0" ) ), calculate( "1", "1",
