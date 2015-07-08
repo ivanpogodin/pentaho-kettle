@@ -345,4 +345,277 @@ public class CalculatorUnitTest {
 
   }
 
+  @Test
+  public void testRoundCustom1() throws KettleException {
+    assertRoundCustom1( 2.0, 1.2, BigDecimal.ROUND_UP );
+    assertRoundCustom1( 1.0, 1.2, BigDecimal.ROUND_DOWN );
+    assertRoundCustom1( 2.0, 1.2, BigDecimal.ROUND_CEILING );
+    assertRoundCustom1( 1.0, 1.2, BigDecimal.ROUND_FLOOR );
+    assertRoundCustom1( 1.0, 1.2, BigDecimal.ROUND_HALF_UP );
+    assertRoundCustom1( 1.0, 1.2, BigDecimal.ROUND_HALF_DOWN );
+    assertRoundCustom1( 1.0, 1.2, BigDecimal.ROUND_HALF_EVEN );
+
+    assertRoundCustom1( 2.0, 1.5, BigDecimal.ROUND_UP );
+    assertRoundCustom1( 1.0, 1.5, BigDecimal.ROUND_DOWN );
+    assertRoundCustom1( 2.0, 1.5, BigDecimal.ROUND_CEILING );
+    assertRoundCustom1( 1.0, 1.5, BigDecimal.ROUND_FLOOR );
+    assertRoundCustom1( 2.0, 1.5, BigDecimal.ROUND_HALF_UP );
+    assertRoundCustom1( 1.0, 1.5, BigDecimal.ROUND_HALF_DOWN );
+    assertRoundCustom1( 2.0, 1.5, BigDecimal.ROUND_HALF_EVEN );
+
+    assertRoundCustom1( 2.0, 1.7, BigDecimal.ROUND_UP );
+    assertRoundCustom1( 1.0, 1.7, BigDecimal.ROUND_DOWN );
+    assertRoundCustom1( 2.0, 1.7, BigDecimal.ROUND_CEILING );
+    assertRoundCustom1( 1.0, 1.7, BigDecimal.ROUND_FLOOR );
+    assertRoundCustom1( 2.0, 1.7, BigDecimal.ROUND_HALF_UP );
+    assertRoundCustom1( 2.0, 1.7, BigDecimal.ROUND_HALF_DOWN );
+    assertRoundCustom1( 2.0, 1.7, BigDecimal.ROUND_HALF_EVEN );
+
+    assertRoundCustom1( 3.0, 2.2, BigDecimal.ROUND_UP );
+    assertRoundCustom1( 2.0, 2.2, BigDecimal.ROUND_DOWN );
+    assertRoundCustom1( 3.0, 2.2, BigDecimal.ROUND_CEILING );
+    assertRoundCustom1( 2.0, 2.2, BigDecimal.ROUND_FLOOR );
+    assertRoundCustom1( 2.0, 2.2, BigDecimal.ROUND_HALF_UP );
+    assertRoundCustom1( 2.0, 2.2, BigDecimal.ROUND_HALF_DOWN );
+    assertRoundCustom1( 2.0, 2.2, BigDecimal.ROUND_HALF_EVEN );
+
+    assertRoundCustom1( 3.0, 2.5, BigDecimal.ROUND_UP );
+    assertRoundCustom1( 2.0, 2.5, BigDecimal.ROUND_DOWN );
+    assertRoundCustom1( 3.0, 2.5, BigDecimal.ROUND_CEILING );
+    assertRoundCustom1( 2.0, 2.5, BigDecimal.ROUND_FLOOR );
+    assertRoundCustom1( 3.0, 2.5, BigDecimal.ROUND_HALF_UP );
+    assertRoundCustom1( 2.0, 2.5, BigDecimal.ROUND_HALF_DOWN );
+    assertRoundCustom1( 2.0, 2.5, BigDecimal.ROUND_HALF_EVEN );
+
+    assertRoundCustom1( 3.0, 2.7, BigDecimal.ROUND_UP );
+    assertRoundCustom1( 2.0, 2.7, BigDecimal.ROUND_DOWN );
+    assertRoundCustom1( 3.0, 2.7, BigDecimal.ROUND_CEILING );
+    assertRoundCustom1( 2.0, 2.7, BigDecimal.ROUND_FLOOR );
+    assertRoundCustom1( 3.0, 2.7, BigDecimal.ROUND_HALF_UP );
+    assertRoundCustom1( 3.0, 2.7, BigDecimal.ROUND_HALF_DOWN );
+    assertRoundCustom1( 3.0, 2.7, BigDecimal.ROUND_HALF_EVEN );
+
+    assertRoundCustom1( -2.0, -1.2, BigDecimal.ROUND_UP );
+    assertRoundCustom1( -1.0, -1.2, BigDecimal.ROUND_DOWN );
+    assertRoundCustom1( -1.0, -1.2, BigDecimal.ROUND_CEILING );
+    assertRoundCustom1( -2.0, -1.2, BigDecimal.ROUND_FLOOR );
+    assertRoundCustom1( -2.0, -1.2, BigDecimal.ROUND_HALF_UP );
+    assertRoundCustom1( -1.0, -1.2, BigDecimal.ROUND_HALF_DOWN );
+    assertRoundCustom1( -1.0, -1.2, BigDecimal.ROUND_HALF_EVEN );
+
+    assertRoundCustom1( -2.0, -1.5, BigDecimal.ROUND_UP );
+    assertRoundCustom1( -1.0, -1.5, BigDecimal.ROUND_DOWN );
+    assertRoundCustom1( -1.0, -1.5, BigDecimal.ROUND_CEILING );
+    assertRoundCustom1( -2.0, -1.5, BigDecimal.ROUND_FLOOR );
+    assertRoundCustom1( -2.0, -1.5, BigDecimal.ROUND_HALF_UP );
+    assertRoundCustom1( -1.0, -1.5, BigDecimal.ROUND_HALF_DOWN );
+    assertRoundCustom1( -2.0, -1.5, BigDecimal.ROUND_HALF_EVEN );
+
+    assertRoundCustom1( -2.0, -1.7, BigDecimal.ROUND_UP );
+    assertRoundCustom1( -1.0, -1.7, BigDecimal.ROUND_DOWN );
+    assertRoundCustom1( -1.0, -1.7, BigDecimal.ROUND_CEILING );
+    assertRoundCustom1( -2.0, -1.7, BigDecimal.ROUND_FLOOR );
+    assertRoundCustom1( -2.0, -1.7, BigDecimal.ROUND_HALF_UP );
+    assertRoundCustom1( -2.0, -1.7, BigDecimal.ROUND_HALF_DOWN );
+    assertRoundCustom1( -2.0, -1.7, BigDecimal.ROUND_HALF_EVEN );
+
+    assertRoundCustom1( -3.0, -2.2, BigDecimal.ROUND_UP );
+    assertRoundCustom1( -2.0, -2.2, BigDecimal.ROUND_DOWN );
+    assertRoundCustom1( -2.0, -2.2, BigDecimal.ROUND_CEILING );
+    assertRoundCustom1( -3.0, -2.2, BigDecimal.ROUND_FLOOR );
+    assertRoundCustom1( -2.0, -2.2, BigDecimal.ROUND_HALF_UP );
+    assertRoundCustom1( -2.0, -2.2, BigDecimal.ROUND_HALF_DOWN );
+    assertRoundCustom1( -2.0, -2.2, BigDecimal.ROUND_HALF_EVEN );
+
+    assertRoundCustom1( -3.0, -2.5, BigDecimal.ROUND_UP );
+    assertRoundCustom1( -2.0, -2.5, BigDecimal.ROUND_DOWN );
+    assertRoundCustom1( -2.0, -2.5, BigDecimal.ROUND_CEILING );
+    assertRoundCustom1( -3.0, -2.5, BigDecimal.ROUND_FLOOR );
+    assertRoundCustom1( -3.0, -2.5, BigDecimal.ROUND_HALF_UP );
+    assertRoundCustom1( -2.0, -2.5, BigDecimal.ROUND_HALF_DOWN );
+    assertRoundCustom1( -2.0, -2.5, BigDecimal.ROUND_HALF_EVEN );
+
+    assertRoundCustom1( -3.0, -2.7, BigDecimal.ROUND_UP );
+    assertRoundCustom1( -2.0, -2.7, BigDecimal.ROUND_DOWN );
+    assertRoundCustom1( -2.0, -2.7, BigDecimal.ROUND_CEILING );
+    assertRoundCustom1( -3.0, -2.7, BigDecimal.ROUND_FLOOR );
+    assertRoundCustom1( -3.0, -2.7, BigDecimal.ROUND_HALF_UP );
+    assertRoundCustom1( -3.0, -2.7, BigDecimal.ROUND_HALF_DOWN );
+    assertRoundCustom1( -3.0, -2.7, BigDecimal.ROUND_HALF_EVEN );
+  }
+
+  public void assertRoundCustom1( final double expectedResult, final double value, final long roundingMode )
+    throws KettleException {
+    RowMeta inputRowMeta = new RowMeta();
+    ValueMetaNumber valueMeta = new ValueMetaNumber( "Value" );
+    ValueMetaInteger roundingModeMeta = new ValueMetaInteger( "RoundingMode" );
+    inputRowMeta.addValueMeta( valueMeta );
+    inputRowMeta.addValueMeta( roundingModeMeta );
+
+    RowSet inputRowSet = smh.getMockInputRowSet( new Object[] { value, roundingMode } );
+    inputRowSet.setRowMeta( inputRowMeta );
+
+    Calculator calculator = new Calculator( smh.stepMeta, smh.stepDataInterface, 0, smh.transMeta, smh.trans );
+    calculator.getInputRowSets().add( inputRowSet );
+    calculator.setInputRowMeta( inputRowMeta );
+    calculator.init( smh.initStepMetaInterface, smh.initStepDataInterface );
+
+    CalculatorMeta meta = new CalculatorMeta();
+    meta.setCalculation( new CalculatorMetaFunction[] { new CalculatorMetaFunction( "test",
+        CalculatorMetaFunction.CALC_ROUND_CUSTOM_1, "Value", "RoundingMode", null, ValueMetaInterface.TYPE_NUMBER, 2,
+        0, false, "", "", "", "" ) } );
+
+    // Verify output
+    try {
+      calculator.addRowListener( new RowAdapter() {
+        @Override
+        public void rowWrittenEvent( RowMetaInterface rowMeta, Object[] row ) throws KettleStepException {
+          assertEquals( expectedResult, row[2] );
+        }
+      } );
+      calculator.processRow( meta, new CalculatorData() );
+    } catch ( KettleException ke ) {
+      ke.printStackTrace();
+      fail();
+    }
+
+  }
+
+  @Test
+  public void testRoundCustom2() throws KettleException {
+    assertRoundCustom2( 2.0, 1.2, 0, BigDecimal.ROUND_UP );
+    assertRoundCustom2( 1.0, 1.2, 0, BigDecimal.ROUND_DOWN );
+    assertRoundCustom2( 2.0, 1.2, 0, BigDecimal.ROUND_CEILING );
+    assertRoundCustom2( 1.0, 1.2, 0, BigDecimal.ROUND_FLOOR );
+    assertRoundCustom2( 1.0, 1.2, 0, BigDecimal.ROUND_HALF_UP );
+    assertRoundCustom2( 1.0, 1.2, 0, BigDecimal.ROUND_HALF_DOWN );
+    assertRoundCustom2( 1.0, 1.2, 0, BigDecimal.ROUND_HALF_EVEN );
+
+    assertRoundCustom2( 2.0, 1.5, 0, BigDecimal.ROUND_UP );
+    assertRoundCustom2( 1.0, 1.5, 0, BigDecimal.ROUND_DOWN );
+    assertRoundCustom2( 2.0, 1.5, 0, BigDecimal.ROUND_CEILING );
+    assertRoundCustom2( 1.0, 1.5, 0, BigDecimal.ROUND_FLOOR );
+    assertRoundCustom2( 2.0, 1.5, 0, BigDecimal.ROUND_HALF_UP );
+    assertRoundCustom2( 1.0, 1.5, 0, BigDecimal.ROUND_HALF_DOWN );
+    assertRoundCustom2( 2.0, 1.5, 0, BigDecimal.ROUND_HALF_EVEN );
+
+    assertRoundCustom2( 2.0, 1.7, 0, BigDecimal.ROUND_UP );
+    assertRoundCustom2( 1.0, 1.7, 0, BigDecimal.ROUND_DOWN );
+    assertRoundCustom2( 2.0, 1.7, 0, BigDecimal.ROUND_CEILING );
+    assertRoundCustom2( 1.0, 1.7, 0, BigDecimal.ROUND_FLOOR );
+    assertRoundCustom2( 2.0, 1.7, 0, BigDecimal.ROUND_HALF_UP );
+    assertRoundCustom2( 2.0, 1.7, 0, BigDecimal.ROUND_HALF_DOWN );
+    assertRoundCustom2( 2.0, 1.7, 0, BigDecimal.ROUND_HALF_EVEN );
+
+    assertRoundCustom2( 3.0, 2.2, 0, BigDecimal.ROUND_UP );
+    assertRoundCustom2( 2.0, 2.2, 0, BigDecimal.ROUND_DOWN );
+    assertRoundCustom2( 3.0, 2.2, 0, BigDecimal.ROUND_CEILING );
+    assertRoundCustom2( 2.0, 2.2, 0, BigDecimal.ROUND_FLOOR );
+    assertRoundCustom2( 2.0, 2.2, 0, BigDecimal.ROUND_HALF_UP );
+    assertRoundCustom2( 2.0, 2.2, 0, BigDecimal.ROUND_HALF_DOWN );
+    assertRoundCustom2( 2.0, 2.2, 0, BigDecimal.ROUND_HALF_EVEN );
+
+    assertRoundCustom2( 3.0, 2.5, 0, BigDecimal.ROUND_UP );
+    assertRoundCustom2( 2.0, 2.5, 0, BigDecimal.ROUND_DOWN );
+    assertRoundCustom2( 3.0, 2.5, 0, BigDecimal.ROUND_CEILING );
+    assertRoundCustom2( 2.0, 2.5, 0, BigDecimal.ROUND_FLOOR );
+    assertRoundCustom2( 3.0, 2.5, 0, BigDecimal.ROUND_HALF_UP );
+    assertRoundCustom2( 2.0, 2.5, 0, BigDecimal.ROUND_HALF_DOWN );
+    assertRoundCustom2( 2.0, 2.5, 0, BigDecimal.ROUND_HALF_EVEN );
+
+    assertRoundCustom2( 3.0, 2.7, 0, BigDecimal.ROUND_UP );
+    assertRoundCustom2( 2.0, 2.7, 0, BigDecimal.ROUND_DOWN );
+    assertRoundCustom2( 3.0, 2.7, 0, BigDecimal.ROUND_CEILING );
+    assertRoundCustom2( 2.0, 2.7, 0, BigDecimal.ROUND_FLOOR );
+    assertRoundCustom2( 3.0, 2.7, 0, BigDecimal.ROUND_HALF_UP );
+    assertRoundCustom2( 3.0, 2.7, 0, BigDecimal.ROUND_HALF_DOWN );
+    assertRoundCustom2( 3.0, 2.7, 0, BigDecimal.ROUND_HALF_EVEN );
+
+    assertRoundCustom2( -2.0, -1.2, 0, BigDecimal.ROUND_UP );
+    assertRoundCustom2( -1.0, -1.2, 0, BigDecimal.ROUND_DOWN );
+    assertRoundCustom2( -1.0, -1.2, 0, BigDecimal.ROUND_CEILING );
+    assertRoundCustom2( -2.0, -1.2, 0, BigDecimal.ROUND_FLOOR );
+    assertRoundCustom2( -2.0, -1.2, 0, BigDecimal.ROUND_HALF_UP );
+    assertRoundCustom2( -1.0, -1.2, 0, BigDecimal.ROUND_HALF_DOWN );
+    assertRoundCustom2( -1.0, -1.2, 0, BigDecimal.ROUND_HALF_EVEN );
+
+    assertRoundCustom2( -2.0, -1.5, 0, BigDecimal.ROUND_UP );
+    assertRoundCustom2( -1.0, -1.5, 0, BigDecimal.ROUND_DOWN );
+    assertRoundCustom2( -1.0, -1.5, 0, BigDecimal.ROUND_CEILING );
+    assertRoundCustom2( -2.0, -1.5, 0, BigDecimal.ROUND_FLOOR );
+    assertRoundCustom2( -2.0, -1.5, 0, BigDecimal.ROUND_HALF_UP );
+    assertRoundCustom2( -1.0, -1.5, 0, BigDecimal.ROUND_HALF_DOWN );
+    assertRoundCustom2( -2.0, -1.5, 0, BigDecimal.ROUND_HALF_EVEN );
+
+    assertRoundCustom2( -2.0, -1.7, 0, BigDecimal.ROUND_UP );
+    assertRoundCustom2( -1.0, -1.7, 0, BigDecimal.ROUND_DOWN );
+    assertRoundCustom2( -1.0, -1.7, 0, BigDecimal.ROUND_CEILING );
+    assertRoundCustom2( -2.0, -1.7, 0, BigDecimal.ROUND_FLOOR );
+    assertRoundCustom2( -2.0, -1.7, 0, BigDecimal.ROUND_HALF_UP );
+    assertRoundCustom2( -2.0, -1.7, 0, BigDecimal.ROUND_HALF_DOWN );
+    assertRoundCustom2( -2.0, -1.7, 0, BigDecimal.ROUND_HALF_EVEN );
+
+    assertRoundCustom2( -3.0, -2.2, 0, BigDecimal.ROUND_UP );
+    assertRoundCustom2( -2.0, -2.2, 0, BigDecimal.ROUND_DOWN );
+    assertRoundCustom2( -2.0, -2.2, 0, BigDecimal.ROUND_CEILING );
+    assertRoundCustom2( -3.0, -2.2, 0, BigDecimal.ROUND_FLOOR );
+    assertRoundCustom2( -2.0, -2.2, 0, BigDecimal.ROUND_HALF_UP );
+    assertRoundCustom2( -2.0, -2.2, 0, BigDecimal.ROUND_HALF_DOWN );
+    assertRoundCustom2( -2.0, -2.2, 0, BigDecimal.ROUND_HALF_EVEN );
+
+    assertRoundCustom2( -3.0, -2.5, 0, BigDecimal.ROUND_UP );
+    assertRoundCustom2( -2.0, -2.5, 0, BigDecimal.ROUND_DOWN );
+    assertRoundCustom2( -2.0, -2.5, 0, BigDecimal.ROUND_CEILING );
+    assertRoundCustom2( -3.0, -2.5, 0, BigDecimal.ROUND_FLOOR );
+    assertRoundCustom2( -3.0, -2.5, 0, BigDecimal.ROUND_HALF_UP );
+    assertRoundCustom2( -2.0, -2.5, 0, BigDecimal.ROUND_HALF_DOWN );
+    assertRoundCustom2( -2.0, -2.5, 0, BigDecimal.ROUND_HALF_EVEN );
+
+    assertRoundCustom2( -3.0, -2.7, 0, BigDecimal.ROUND_UP );
+    assertRoundCustom2( -2.0, -2.7, 0, BigDecimal.ROUND_DOWN );
+    assertRoundCustom2( -2.0, -2.7, 0, BigDecimal.ROUND_CEILING );
+    assertRoundCustom2( -3.0, -2.7, 0, BigDecimal.ROUND_FLOOR );
+    assertRoundCustom2( -3.0, -2.7, 0, BigDecimal.ROUND_HALF_UP );
+    assertRoundCustom2( -3.0, -2.7, 0, BigDecimal.ROUND_HALF_DOWN );
+    assertRoundCustom2( -3.0, -2.7, 0, BigDecimal.ROUND_HALF_EVEN );
+  }
+
+  public void assertRoundCustom2( final double expectedResult, final double value, final long precision,
+      final long roundingMode ) throws KettleException {
+    RowMeta inputRowMeta = new RowMeta();
+    ValueMetaNumber valueMeta = new ValueMetaNumber( "Value" );
+    ValueMetaInteger precisionMeta = new ValueMetaInteger( "Precision" );
+    ValueMetaInteger roundingModeMeta = new ValueMetaInteger( "RoundingMode" );
+    inputRowMeta.addValueMeta( valueMeta );
+    inputRowMeta.addValueMeta( precisionMeta );
+    inputRowMeta.addValueMeta( roundingModeMeta );
+
+    RowSet inputRowSet = smh.getMockInputRowSet( new Object[] { value, precision, roundingMode } );
+    inputRowSet.setRowMeta( inputRowMeta );
+
+    Calculator calculator = new Calculator( smh.stepMeta, smh.stepDataInterface, 0, smh.transMeta, smh.trans );
+    calculator.getInputRowSets().add( inputRowSet );
+    calculator.setInputRowMeta( inputRowMeta );
+    calculator.init( smh.initStepMetaInterface, smh.initStepDataInterface );
+
+    CalculatorMeta meta = new CalculatorMeta();
+    meta.setCalculation( new CalculatorMetaFunction[] { new CalculatorMetaFunction( "test",
+        CalculatorMetaFunction.CALC_ROUND_CUSTOM_2, "Value", "Precision", "RoundingMode",
+        ValueMetaInterface.TYPE_NUMBER, 2, 0, false, "", "", "", "" ) } );
+
+    // Verify output
+    try {
+      calculator.addRowListener( new RowAdapter() {
+        @Override
+        public void rowWrittenEvent( RowMetaInterface rowMeta, Object[] row ) throws KettleStepException {
+          assertEquals( expectedResult, row[3] );
+        }
+      } );
+      calculator.processRow( meta, new CalculatorData() );
+    } catch ( KettleException ke ) {
+      ke.printStackTrace();
+      fail();
+    }
+  }
+
 }
