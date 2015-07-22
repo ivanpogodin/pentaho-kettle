@@ -57,79 +57,80 @@ public class CalculatorMetaFunction implements Cloneable {
   public static final int CALC_ROUND_2 = 15;
   public static final int CALC_ROUND_STD_1 = 16;
   public static final int CALC_ROUND_STD_2 = 17;
-  public static final int CALC_CEIL = 18;
-  public static final int CALC_FLOOR = 19;
-  public static final int CALC_NVL = 20;
-  public static final int CALC_ADD_DAYS = 21;
-  public static final int CALC_YEAR_OF_DATE = 22;
-  public static final int CALC_MONTH_OF_DATE = 23;
-  public static final int CALC_DAY_OF_YEAR = 24;
-  public static final int CALC_DAY_OF_MONTH = 25;
-  public static final int CALC_DAY_OF_WEEK = 26;
-  public static final int CALC_WEEK_OF_YEAR = 27;
-  public static final int CALC_WEEK_OF_YEAR_ISO8601 = 28;
-  public static final int CALC_YEAR_OF_DATE_ISO8601 = 29;
-  public static final int CALC_BYTE_TO_HEX_ENCODE = 30;
-  public static final int CALC_HEX_TO_BYTE_DECODE = 31;
-  public static final int CALC_CHAR_TO_HEX_ENCODE = 32;
-  public static final int CALC_HEX_TO_CHAR_DECODE = 33;
-  public static final int CALC_CRC32 = 34;
-  public static final int CALC_ADLER32 = 35;
-  public static final int CALC_MD5 = 36;
-  public static final int CALC_SHA1 = 37;
-  public static final int CALC_LEVENSHTEIN_DISTANCE = 38;
-  public static final int CALC_METAPHONE = 39;
-  public static final int CALC_DOUBLE_METAPHONE = 40;
-  public static final int CALC_ABS = 41;
-  public static final int CALC_REMOVE_TIME_FROM_DATE = 42;
-  public static final int CALC_DATE_DIFF = 43;
-  public static final int CALC_ADD3 = 44;
-  public static final int CALC_INITCAP = 45;
-  public static final int CALC_UPPER_CASE = 46;
-  public static final int CALC_LOWER_CASE = 47;
-  public static final int CALC_MASK_XML = 48;
-  public static final int CALC_USE_CDATA = 49;
-  public static final int CALC_REMOVE_CR = 50;
-  public static final int CALC_REMOVE_LF = 51;
-  public static final int CALC_REMOVE_CRLF = 52;
-  public static final int CALC_REMOVE_TAB = 53;
-  public static final int CALC_GET_ONLY_DIGITS = 54;
-  public static final int CALC_REMOVE_DIGITS = 55;
-  public static final int CALC_STRING_LEN = 56;
-  public static final int CALC_LOAD_FILE_CONTENT_BINARY = 57;
-  public static final int CALC_ADD_TIME_TO_DATE = 58;
-  public static final int CALC_QUARTER_OF_DATE = 59;
-  public static final int CALC_SUBSTITUTE_VARIABLE = 60;
-  public static final int CALC_UNESCAPE_XML = 61;
-  public static final int CALC_ESCAPE_HTML = 62;
-  public static final int CALC_UNESCAPE_HTML = 63;
-  public static final int CALC_ESCAPE_SQL = 64;
-  public static final int CALC_DATE_WORKING_DIFF = 65;
-  public static final int CALC_ADD_MONTHS = 66;
-  public static final int CALC_CHECK_XML_FILE_WELL_FORMED = 67;
-  public static final int CALC_CHECK_XML_WELL_FORMED = 68;
-  public static final int CALC_GET_FILE_ENCODING = 69;
-  public static final int CALC_DAMERAU_LEVENSHTEIN = 70;
-  public static final int CALC_NEEDLEMAN_WUNSH = 71;
-  public static final int CALC_JARO = 72;
-  public static final int CALC_JARO_WINKLER = 73;
-  public static final int CALC_SOUNDEX = 74;
-  public static final int CALC_REFINED_SOUNDEX = 75;
-  public static final int CALC_ADD_HOURS = 76;
-  public static final int CALC_ADD_MINUTES = 77;
-  public static final int CALC_DATE_DIFF_MSEC = 78;
-  public static final int CALC_DATE_DIFF_SEC = 79;
-  public static final int CALC_DATE_DIFF_MN = 80;
-  public static final int CALC_DATE_DIFF_HR = 81;
-  public static final int CALC_HOUR_OF_DAY = 82;
-  public static final int CALC_MINUTE_OF_HOUR = 83;
-  public static final int CALC_SECOND_OF_MINUTE = 84;
-  public static final int CALC_ROUND_CUSTOM_1 = 85;
-  public static final int CALC_ROUND_CUSTOM_2 = 86;
+  public static final int CALC_ROUND_CUSTOM_1 = 18;
+  public static final int CALC_ROUND_CUSTOM_2 = 19;
+  public static final int CALC_CEIL = 20;
+  public static final int CALC_FLOOR = 21;
+  public static final int CALC_NVL = 22;
+  public static final int CALC_ADD_DAYS = 23;
+  public static final int CALC_YEAR_OF_DATE = 24;
+  public static final int CALC_MONTH_OF_DATE = 25;
+  public static final int CALC_DAY_OF_YEAR = 26;
+  public static final int CALC_DAY_OF_MONTH = 27;
+  public static final int CALC_DAY_OF_WEEK = 28;
+  public static final int CALC_WEEK_OF_YEAR = 29;
+  public static final int CALC_WEEK_OF_YEAR_ISO8601 = 30;
+  public static final int CALC_YEAR_OF_DATE_ISO8601 = 31;
+  public static final int CALC_BYTE_TO_HEX_ENCODE = 32;
+  public static final int CALC_HEX_TO_BYTE_DECODE = 33;
+  public static final int CALC_CHAR_TO_HEX_ENCODE = 34;
+  public static final int CALC_HEX_TO_CHAR_DECODE = 35;
+  public static final int CALC_CRC32 = 36;
+  public static final int CALC_ADLER32 = 37;
+  public static final int CALC_MD5 = 38;
+  public static final int CALC_SHA1 = 39;
+  public static final int CALC_LEVENSHTEIN_DISTANCE = 40;
+  public static final int CALC_METAPHONE = 41;
+  public static final int CALC_DOUBLE_METAPHONE = 42;
+  public static final int CALC_ABS = 43;
+  public static final int CALC_REMOVE_TIME_FROM_DATE = 44;
+  public static final int CALC_DATE_DIFF = 45;
+  public static final int CALC_ADD3 = 46;
+  public static final int CALC_INITCAP = 47;
+  public static final int CALC_UPPER_CASE = 48;
+  public static final int CALC_LOWER_CASE = 49;
+  public static final int CALC_MASK_XML = 450;
+  public static final int CALC_USE_CDATA = 51;
+  public static final int CALC_REMOVE_CR = 52;
+  public static final int CALC_REMOVE_LF = 53;
+  public static final int CALC_REMOVE_CRLF = 54;
+  public static final int CALC_REMOVE_TAB = 55;
+  public static final int CALC_GET_ONLY_DIGITS = 56;
+  public static final int CALC_REMOVE_DIGITS = 57;
+  public static final int CALC_STRING_LEN = 58;
+  public static final int CALC_LOAD_FILE_CONTENT_BINARY = 59;
+  public static final int CALC_ADD_TIME_TO_DATE = 60;
+  public static final int CALC_QUARTER_OF_DATE = 61;
+  public static final int CALC_SUBSTITUTE_VARIABLE = 62;
+  public static final int CALC_UNESCAPE_XML = 63;
+  public static final int CALC_ESCAPE_HTML = 64;
+  public static final int CALC_UNESCAPE_HTML = 65;
+  public static final int CALC_ESCAPE_SQL = 66;
+  public static final int CALC_DATE_WORKING_DIFF = 67;
+  public static final int CALC_ADD_MONTHS = 68;
+  public static final int CALC_CHECK_XML_FILE_WELL_FORMED = 69;
+  public static final int CALC_CHECK_XML_WELL_FORMED = 70;
+  public static final int CALC_GET_FILE_ENCODING = 71;
+  public static final int CALC_DAMERAU_LEVENSHTEIN = 72;
+  public static final int CALC_NEEDLEMAN_WUNSH = 73;
+  public static final int CALC_JARO = 74;
+  public static final int CALC_JARO_WINKLER = 75;
+  public static final int CALC_SOUNDEX = 76;
+  public static final int CALC_REFINED_SOUNDEX = 77;
+  public static final int CALC_ADD_HOURS = 78;
+  public static final int CALC_ADD_MINUTES = 79;
+  public static final int CALC_DATE_DIFF_MSEC = 80;
+  public static final int CALC_DATE_DIFF_SEC = 781;
+  public static final int CALC_DATE_DIFF_MN = 82;
+  public static final int CALC_DATE_DIFF_HR = 83;
+  public static final int CALC_HOUR_OF_DAY = 84;
+  public static final int CALC_MINUTE_OF_HOUR = 85;
+  public static final int CALC_SECOND_OF_MINUTE = 86;
 
   public static final String[] calc_desc = {
     "-", "CONSTANT", "COPY_FIELD", "ADD", "SUBTRACT", "MULTIPLY", "DIVIDE", "SQUARE", "SQUARE_ROOT",
     "PERCENT_1", "PERCENT_2", "PERCENT_3", "COMBINATION_1", "COMBINATION_2", "ROUND_1", "ROUND_2",
+    "ROUND_CUSTOM_1", "ROUND_CUSTOM_2",
     "ROUND_STD_1", "ROUND_STD_2", "CEIL", "FLOOR", "NVL", "ADD_DAYS", "YEAR_OF_DATE", "MONTH_OF_DATE",
     "DAY_OF_YEAR", "DAY_OF_MONTH", "DAY_OF_WEEK", "WEEK_OF_YEAR", "WEEK_OF_YEAR_ISO8601",
     "YEAR_OF_DATE_ISO8601", "BYTE_TO_HEX_ENCODE", "HEX_TO_BYTE_DECODE", "CHAR_TO_HEX_ENCODE",
@@ -141,8 +142,7 @@ public class CalculatorMetaFunction implements Cloneable {
     "DATE_WORKING_DIFF", "ADD_MONTHS", "CHECK_XML_FILE_WELL_FORMED", "CHECK_XML_WELL_FORMED",
     "GET_FILE_ENCODING", "DAMERAU_LEVENSHTEIN", "NEEDLEMAN_WUNSH", "JARO", "JARO_WINKLER", "SOUNDEX",
     "REFINED_SOUNDEX", "ADD_HOURS", "ADD_MINUTES", "DATE_DIFF_MSEC", "DATE_DIFF_SEC", "DATE_DIFF_MN",
-    "DATE_DIFF_HR", "HOUR_OF_DAY", "MINUTE_OF_HOUR", "SECOND_OF_MINUTE",
-    "ROUND_CUSTOM_1", "ROUND_CUSTOM_2", };
+    "DATE_DIFF_HR", "HOUR_OF_DAY", "MINUTE_OF_HOUR", "SECOND_OF_MINUTE", };
 
   public static final String[] calcLongDesc = {
     "-", BaseMessages.getString( PKG, "CalculatorMetaFunction.CalcFunctions.SetFieldToConstant" ),
@@ -152,6 +152,8 @@ public class CalculatorMetaFunction implements Cloneable {
     BaseMessages.getString( PKG, "CalculatorMetaFunction.CalcFunctions.Hypotenuse" ),
     BaseMessages.getString( PKG, "CalculatorMetaFunction.CalcFunctions.Round" ),
     BaseMessages.getString( PKG, "CalculatorMetaFunction.CalcFunctions.Round2" ),
+    BaseMessages.getString( PKG, "CalculatorMetaFunction.CalcFunctions.RoundCustom" ),
+    BaseMessages.getString( PKG, "CalculatorMetaFunction.CalcFunctions.RoundCustom2" ),
     BaseMessages.getString( PKG, "CalculatorMetaFunction.CalcFunctions.RoundStd" ),
     BaseMessages.getString( PKG, "CalculatorMetaFunction.CalcFunctions.RoundStd2" ),
     BaseMessages.getString( PKG, "CalculatorMetaFunction.CalcFunctions.Ceil" ),
@@ -219,9 +221,7 @@ public class CalculatorMetaFunction implements Cloneable {
     BaseMessages.getString( PKG, "CalculatorMetaFunction.CalcFunctions.DateDiffHr" ),
     BaseMessages.getString( PKG, "CalculatorMetaFunction.CalcFunctions.HourOfDay" ),
     BaseMessages.getString( PKG, "CalculatorMetaFunction.CalcFunctions.MinuteOfHour" ),
-    BaseMessages.getString( PKG, "CalculatorMetaFunction.CalcFunctions.SecondOfMinute" ),
-    BaseMessages.getString( PKG, "CalculatorMetaFunction.CalcFunctions.RoundCustom" ),
-    BaseMessages.getString( PKG, "CalculatorMetaFunction.CalcFunctions.RoundCustom2" ), };
+    BaseMessages.getString( PKG, "CalculatorMetaFunction.CalcFunctions.SecondOfMinute" ), };
 
   public static final int[] calcDefaultResultType = new int[ calc_desc.length ];
 
