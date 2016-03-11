@@ -33,6 +33,7 @@ import org.pentaho.di.core.encryption.Encr;
 import org.pentaho.di.core.exception.KettleException;
 import org.pentaho.di.core.exception.KettleStepException;
 import org.pentaho.di.core.exception.KettleXMLException;
+import org.pentaho.di.core.plugins.ParentFirst;
 import org.pentaho.di.core.row.RowMetaInterface;
 import org.pentaho.di.core.variables.VariableSpace;
 import org.pentaho.di.core.xml.XMLHandler;
@@ -58,6 +59,7 @@ import org.w3c.dom.Node;
     categoryDescription = "i18n:org.pentaho.di.trans.step:BaseStep.Category.Output",
     image = "SFD.svg",
     documentationUrl = "http://wiki.pentaho.com/display/EAI/Salesforce+Delete" )
+@ParentFirst( patterns = { ".*" } )
 public class SalesforceDeleteMeta extends BaseStepMeta implements StepMetaInterface {
   private static Class<?> PKG = SalesforceDeleteMeta.class; // for i18n purposes, needed by Translator2!!
 

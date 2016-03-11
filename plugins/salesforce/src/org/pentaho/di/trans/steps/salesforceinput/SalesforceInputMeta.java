@@ -33,6 +33,7 @@ import org.pentaho.di.core.encryption.Encr;
 import org.pentaho.di.core.exception.KettleException;
 import org.pentaho.di.core.exception.KettleStepException;
 import org.pentaho.di.core.exception.KettleXMLException;
+import org.pentaho.di.core.plugins.ParentFirst;
 import org.pentaho.di.core.row.RowMetaInterface;
 import org.pentaho.di.core.row.ValueMeta;
 import org.pentaho.di.core.row.ValueMetaInterface;
@@ -60,6 +61,7 @@ import org.w3c.dom.Node;
     categoryDescription = "i18n:org.pentaho.di.trans.step:BaseStep.Category.Input",
     image = "SFI.svg",
     documentationUrl = "http://wiki.pentaho.com/display/EAI/SalesForce+Input" )
+@ParentFirst( patterns = { ".*" } )
 public class SalesforceInputMeta extends BaseStepMeta implements StepMetaInterface {
   public static String DATE_TIME_FORMAT = "yyyy-MM-dd HH:mm:ss";
 
