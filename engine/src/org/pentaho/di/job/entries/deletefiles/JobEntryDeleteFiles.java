@@ -210,8 +210,7 @@ public class JobEntryDeleteFiles extends JobEntryBase implements Cloneable, JobE
       }
     }
 
-    if ( argFromPrevious && rows != null ) // Copy the input row to the (command line) arguments
-    {
+    if ( argFromPrevious && rows != null ) { // Copy the input row to the (command line) arguments
       for ( int iteration = 0; iteration < rows.size() && !parentJob.isStopped(); iteration++ ) {
         resultRow = rows.get( iteration );
 

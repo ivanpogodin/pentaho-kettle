@@ -238,8 +238,8 @@ public class JobEntrySetVariables extends JobEntryBase implements Cloneable, Job
           Properties properties = new Properties();
           InputStream is = KettleVFS.getInputStream( realFilename );
           // for UTF8 properties files
-          InputStreamReader isr = new InputStreamReader(is, "UTF-8");
-          BufferedReader reader = new BufferedReader(isr);
+          InputStreamReader isr = new InputStreamReader( is, "UTF-8" );
+          BufferedReader reader = new BufferedReader( isr );
           properties.load( reader );
           for ( Object key : properties.keySet() ) {
             variables.add( (String) key );

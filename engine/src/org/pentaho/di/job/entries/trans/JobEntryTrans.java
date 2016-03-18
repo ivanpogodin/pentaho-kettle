@@ -637,7 +637,7 @@ public class JobEntryTrans extends JobEntryBase implements Cloneable, JobEntryIn
 
     // Open the transformation...
     //
-    switch( specificationMethod ) {
+    switch ( specificationMethod ) {
       case FILENAME:
         if ( isDetailed() ) {
           logDetailed( BaseMessages.getString(
@@ -677,8 +677,7 @@ public class JobEntryTrans extends JobEntryBase implements Cloneable, JobEntryIn
 
     int iteration = 0;
     String[] args1 = arguments;
-    if ( args1 == null || args1.length == 0 ) // No arguments set, look at the parent job.
-    {
+    if ( args1 == null || args1.length == 0 ) { // No arguments set, look at the parent job.
       args1 = parentJob.getArguments();
     }
     // initializeVariablesFrom(parentJob);
@@ -1194,7 +1193,7 @@ public class JobEntryTrans extends JobEntryBase implements Cloneable, JobEntryIn
       CurrentDirectoryResolver r = new CurrentDirectoryResolver();
       VariableSpace tmpSpace = r.resolveCurrentDirectory(
           specificationMethod, space, rep, parentJob, getFilename() );
-      switch( specificationMethod ) {
+      switch ( specificationMethod ) {
         case FILENAME:
           String realFilename = tmpSpace.environmentSubstitute( getFilename() );
           if ( rep != null ) {

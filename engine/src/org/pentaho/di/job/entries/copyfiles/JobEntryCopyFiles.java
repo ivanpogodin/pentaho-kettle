@@ -76,7 +76,7 @@ import org.w3c.dom.Node;
  */
 public class JobEntryCopyFiles extends JobEntryBase implements Cloneable, JobEntryInterface {
   private static Class<?> PKG = JobEntryCopyFiles.class; // for i18n purposes, needed by Translator2!!
-  
+
   public static final String SOURCE_CONFIGURATION_NAME = "source_configuration_name";
   public static final String SOURCE_FILE_FOLDER = "source_filefolder";
 
@@ -103,7 +103,7 @@ public class JobEntryCopyFiles extends JobEntryBase implements Cloneable, JobEnt
   HashSet<String> list_files_remove = new HashSet<String>();
   HashSet<String> list_add_result = new HashSet<String>();
   int NbrFail = 0;
-  
+
   private Map<String, String> configurationMappings = new HashMap<String, String>();
 
   public JobEntryCopyFiles( String n ) {
@@ -342,8 +342,7 @@ public class JobEntryCopyFiles extends JobEntryBase implements Cloneable, JobEnt
         }
       }
 
-      if ( arg_from_previous && rows != null ) // Copy the input row to the (command line) arguments
-      {
+      if ( arg_from_previous && rows != null ) { // Copy the input row to the (command line) arguments
         for ( int iteration = 0; iteration < rows.size() && !parentJob.isStopped(); iteration++ ) {
           resultRow = rows.get( iteration );
 
@@ -437,8 +436,7 @@ public class JobEntryCopyFiles extends JobEntryBase implements Cloneable, JobEnt
         if ( CreateDestinationFolder( destinationfilefolder ) ) {
 
           // Basic Tests
-          if ( sourcefilefolder.getType().equals( FileType.FOLDER ) && destination_is_a_file )
-          {
+          if ( sourcefilefolder.getType().equals( FileType.FOLDER ) && destination_is_a_file ) {
             // Source is a folder, destination is a file
             // WARNING !!! CAN NOT COPY FOLDER TO FILE !!!
 
@@ -1132,22 +1130,22 @@ public class JobEntryCopyFiles extends JobEntryBase implements Cloneable, JobEnt
   public boolean evaluates() {
     return true;
   }
-  
+
   public String loadURL( String url, String ncName, IMetaStore metastore, Map mappings ) {
     if ( !Const.isEmpty( ncName ) && !Const.isEmpty( url ) ) {
       mappings.put( url, ncName );
     }
     return url;
   }
-  
+
   public void setConfigurationMappings( Map<String, String> mappings ) {
     this.configurationMappings = mappings;
   }
-  
+
   public String getConfigurationBy( String url ) {
     return this.configurationMappings.get( url );
   }
-  
+
   public String getUrlPath( String incomingURL ) {
     String path = null;
     try {
