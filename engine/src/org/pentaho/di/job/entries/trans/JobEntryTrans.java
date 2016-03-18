@@ -22,11 +22,6 @@
 
 package org.pentaho.di.job.entries.trans;
 
-import static org.pentaho.di.job.entry.validator.AndValidator.putValidators;
-import static org.pentaho.di.job.entry.validator.JobEntryValidatorUtils.andValidator;
-import static org.pentaho.di.job.entry.validator.JobEntryValidatorUtils.notBlankValidator;
-import static org.pentaho.di.job.entry.validator.JobEntryValidatorUtils.notNullValidator;
-
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -60,6 +55,8 @@ import org.pentaho.di.job.Job;
 import org.pentaho.di.job.JobMeta;
 import org.pentaho.di.job.entry.JobEntryBase;
 import org.pentaho.di.job.entry.JobEntryInterface;
+import org.pentaho.di.job.entry.validator.AndValidator;
+import org.pentaho.di.job.entry.validator.JobEntryValidatorUtils;
 import org.pentaho.di.repository.ObjectId;
 import org.pentaho.di.repository.Repository;
 import org.pentaho.di.repository.RepositoryDirectory;
@@ -1336,13 +1333,13 @@ public class JobEntryTrans extends JobEntryBase implements Cloneable, JobEntryIn
   public void check( List<CheckResultInterface> remarks, JobMeta jobMeta, VariableSpace space,
                      Repository repository, IMetaStore metaStore ) {
     if ( setLogfile ) {
-      andValidator().validate( this, "logfile", remarks, putValidators( notBlankValidator() ) );
+      JobEntryValidatorUtils.andValidator().validate( this, "logfile", remarks, AndValidator.putValidators( JobEntryValidatorUtils.notBlankValidator() ) );
     }
     if ( !Const.isEmpty( filename ) ) {
-      andValidator().validate( this, "filename", remarks, putValidators( notBlankValidator() ) );
+      JobEntryValidatorUtils.andValidator().validate( this, "filename", remarks, AndValidator.putValidators( JobEntryValidatorUtils.notBlankValidator() ) );
     } else {
-      andValidator().validate( this, "transname", remarks, putValidators( notBlankValidator() ) );
-      andValidator().validate( this, "directory", remarks, putValidators( notNullValidator() ) );
+      JobEntryValidatorUtils.andValidator().validate( this, "transname", remarks, AndValidator.putValidators( JobEntryValidatorUtils.notBlankValidator() ) );
+      JobEntryValidatorUtils.andValidator().validate( this, "directory", remarks, AndValidator.putValidators( JobEntryValidatorUtils.notNullValidator() ) );
     }
   }
 
