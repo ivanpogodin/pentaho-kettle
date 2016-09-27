@@ -203,7 +203,7 @@ public class PaloCellInputMeta extends BaseStepMeta implements StepMetaInterface
   }
 
   public void check( final List<CheckResultInterface> remarks, final TransMeta transMeta, final StepMeta stepMeta,
-      final RowMetaInterface prev, final String input[], final String output[], final RowMetaInterface info,
+      final RowMetaInterface prev, final String[] input, final String[] output, final RowMetaInterface info,
       VariableSpace space, Repository repository, IMetaStore metaStore ) {
     CheckResult cr;
 
